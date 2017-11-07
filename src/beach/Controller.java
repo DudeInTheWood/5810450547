@@ -1,4 +1,4 @@
-package sample;
+package beach;
 
 public class Controller {
 }

@@ -1,6 +1,6 @@
 # README #
 
-this is Project for kanticha yingphaibul (5810450547) with Beach theme
+this is Project for kanticha yingphaibul (5810450547) with beach theme
 
 ### What is this repository for? ###
 

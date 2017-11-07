@@ -1,4 +1,4 @@
-package sample;
+package beach;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
