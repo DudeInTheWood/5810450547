@@ -11,6 +11,9 @@ public class Controller {
 
     public void initialize() {
         pane = new Pane();
-        beach = new Beach(0,0);
+    }
+
+    public void display(){
+
     }
 }

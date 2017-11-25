@@ -11,4 +11,12 @@ public class Ship extends Canvas{
         setHeight(600);
         setWidth(600);
     }
+
+    public void draw() {
+
+    }
+
+    public void bilge() {
+
+    }
 }
