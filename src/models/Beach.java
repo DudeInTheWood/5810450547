@@ -1,4 +1,4 @@
-package beach;
+package models;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -6,16 +6,12 @@ import javafx.scene.paint.Color;
 
 import java.util.Random;
 
-public class Beach extends Canvas {
+public class Beach extends Drawable {
     private GraphicsContext gc = getGraphicsContext2D();
     private Random rand = new Random();
 
     public Beach(int x,int y){
-        setTranslateX(x);
-        setTranslateY(y);
-
-        setWidth(1500);
-        setHeight(1500);
+        super(x,y);
     }
 
     public void draw() {

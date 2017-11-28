@@ -1,5 +1,3 @@
-package beach;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,8 +8,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("BeachView.fxml"));
-        primaryStage.setTitle("Hello World");
+        Parent root = FXMLLoader.load(getClass().getResource("beach/BeachView.fxml"));
+        primaryStage.setTitle("Beach");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }

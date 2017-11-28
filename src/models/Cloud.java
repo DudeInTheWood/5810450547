@@ -1,4 +1,4 @@
-package beach;
+package models;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;

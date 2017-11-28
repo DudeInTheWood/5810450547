@@ -1,4 +1,4 @@
-package beach;
+package models;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -14,6 +14,7 @@ public class Van extends Canvas {
         setHeight(400);
         setWidth(600);
     }
+
 
     public void draw(){
         drawBody();
