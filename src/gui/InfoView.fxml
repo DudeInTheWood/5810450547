@@ -1,14 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.Double?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controllers.infoViewController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.infoViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffcf1f" height="373.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="571.0" />
+      <Polygon fill="#ff8b1f" layoutX="64.0" layoutY="347.0" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Polygon fill="#ff8b1f" layoutX="152.0" layoutY="347.0" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Polygon fill="#ff8b1f" layoutX="250.0" layoutY="347.0" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Polygon fill="#ff8b1f" layoutX="350.0" layoutY="347.0" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Polygon fill="#ff8b1f" layoutX="450.0" layoutY="347.0" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Polygon fill="#ff8b1f" layoutX="536.0" layoutY="347.0" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Button layoutX="514.0" layoutY="354.0" mnemonicParsing="false" onAction="#closeBtn" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #da5fc6;" text="CLOSE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#da5fc6" height="129.0" layoutX="27.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+      <Label layoutX="27.0" layoutY="153.0" text="He is some Dude" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="153.0" text="press W :" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="64.0" text="ID : 5810450547" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="187.0" text="press A :" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="204.0" text="pressD : " textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="37.0" text="Create by Kantciah yingphaibul" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="170.0" text="press S :" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="129.0" text="To Control that dude..." textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="89.0" text="Sec : 200" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="217.0" layoutY="153.0" text="move up" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="216.0" layoutY="170.0" text="move down" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="217.0" layoutY="187.0" text="move left" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="217.0" layoutY="204.0" text="move right" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="258.0" text="ah.... forget about the van, he's wlway move like crazy.." textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="406.0" layoutY="22.0" text="JAVA BEACH" textFill="#b80d9a">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="147.0" layoutY="230.0" text="Change skin color like lizard :" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="230.0" text="sure... press random color." textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4ff1f" height="5.0" layoutX="383.0" layoutY="52.0" stroke="BLACK" strokeType="INSIDE" width="192.0" />
+   </children>
 </AnchorPane>

@@ -1,21 +1,20 @@
 package controllers;
 
-import javafx.animation.AnimationTimer;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import models.*;
 
 import java.io.IOException;
-import java.lang.Character;
 import java.util.Random;
 
 public class Controller {
@@ -26,7 +25,8 @@ public class Controller {
     protected Beach beachArea;
     protected CoconutTree coco1, coco2;
     protected Van van;
-    protected Player character1;
+    protected Player player;
+    protected SkullIsland skull;
 
 
     @FXML
@@ -45,30 +45,33 @@ public class Controller {
     @FXML
     public void initialize(){
         beachArea = new Beach(0,0);
-        character1 = new Player(500,300);
+        player = new Player(500,300);
         van = new Van(-300,100);
-        character1 = new Player(500,300);
+        skull = new SkullIsland(20,185);
+        player = new Player(500,300);
         thread1 = new Thread(van);
         thread2 = new Thread(beachArea);
-        thread3 = new Thread(character1);
+        thread3 = new Thread(player);
         display();
         pane.getParent().setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
                 switch (event.getCode()){
                     case W:
-                        character1.goUp();
+                        player.goUp();
                         System.out.println("w");break;
                     case S:
-                        character1.goDown();
+                        player.goDown();
                         System.out.println("s");break;
                     case A:
-                        character1.goLeft();
+                        player.goLeft();
                         System.out.println("a");break;
                     case D:
-                        character1.goRight();
+                        player.goRight();
                         System.out.println("d");break;
-
+                    case ENTER:
+                        System.out.println("Found island");
+                        showSkullIsland();
                 }
             }
         });
@@ -78,7 +81,7 @@ public class Controller {
 
     public void display() {
         pane.getChildren().clear();
-        pane.getChildren().addAll(beachArea, character1, van);
+        pane.getChildren().addAll(beachArea, player, van, skull);
         van.vanTransition();
         thread1.start();
         thread2.start();
@@ -87,13 +90,21 @@ public class Controller {
 
     @FXML
     public void randomBodyColor(){
-        System.out.println("kuy");
         Random rand = new Random();
         int r = rand.nextInt(255)+0;
         int g = rand.nextInt(255)+0;
         int b = rand.nextInt(255)+0;
-        character1.setBodyColor(Color.rgb(r,g,b));
-        character1.draw();
+        player.setBodyColor(Color.rgb(r,g,b));
+        player.draw();
+    }
+
+    @FXML
+    public void showSkullIsland(){
+        skull.draw();
+        FadeTransition fade = new FadeTransition(Duration.seconds(5),skull);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.play();
     }
 
 }
