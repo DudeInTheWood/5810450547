@@ -1,12 +1,11 @@
 package models;
 
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 import java.util.Random;
 
-public class Cloud extends Drawable{
+public class Cloud extends DrawObject implements Drawable {
     private GraphicsContext gc = getGraphicsContext2D();
     private Random rand = new Random();
     public Cloud(int x, int y){

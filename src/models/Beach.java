@@ -1,19 +1,17 @@
 package models;
 
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 import java.util.Random;
 
-public class Beach extends Drawable implements Runnable {
+public class Beach extends DrawObject implements Runnable,Drawable {
     private GraphicsContext gc = getGraphicsContext2D();
     private Cloud cloud1;
     private Random rand = new Random();
 
     public Beach(int x,int y){
         super(x,y);
-        cloud1 = new Cloud(50,50);
     }
 
     @Override
@@ -31,7 +29,11 @@ public class Beach extends Drawable implements Runnable {
         gc.setFill(Color.rgb(147 , 115 , 75));
         gc.fillRect(0,300,900,10);
         gc.setFill(Color.grayRgb(169));
-        gc.fillRect(0,480,900,50);
+        gc.fillRect(0,470,900,55);
+        gc.setFill(Color.grayRgb(236, 0.7176));
+        for (int i = 0;i <= 800; i+=100){
+            gc.fillRect(i ,485, 50, 20);
+        }
     }
 
     public void drawSky() {
@@ -41,7 +43,6 @@ public class Beach extends Drawable implements Runnable {
         gc.fillOval(300,120,700,250);
         gc.setFill(Color.rgb(255, 231, 0));
         gc.fillOval(550,180,150,120);
-        cloud1.draw();
     }
 
     public void drawSea() {

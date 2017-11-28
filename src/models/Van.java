@@ -2,29 +2,26 @@ package models;
 
 import javafx.animation.Animation;
 import javafx.animation.TranslateTransition;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
-public class Van extends Canvas implements Runnable{
-    private GraphicsContext gc = getGraphicsContext2D();
+public class Van extends DrawObject implements Runnable,Drawable{
 
     public Van (int x, int y){
-        setTranslateX(x);
-        setTranslateY(y);
-
+        super(x, y);
+        setWidth(300);
         setHeight(400);
-        setWidth(600);
     }
     public void vanTransition() {
-        TranslateTransition tTran = new TranslateTransition(Duration.seconds(4) , this);
+        TranslateTransition tTran = new TranslateTransition(Duration.seconds(10) , this);
         tTran.setFromX(this.getTranslateX());
-        tTran.setToX(this.getTranslateX() + 2000);
+        tTran.setToX(this.getTranslateX() + 1200);
         tTran.setCycleCount(Animation.INDEFINITE);
         tTran.play();
     }
 
+    @Override
     public void draw(){
         drawBody();
     }
@@ -65,6 +62,6 @@ public class Van extends Canvas implements Runnable{
     @Override
     public void run() {
         draw();
-        vanTransition();
     }
+
 }

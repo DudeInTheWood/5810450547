@@ -4,7 +4,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class CoconutTree extends Canvas {
+public class CoconutTree extends Canvas implements Runnable,Drawable {
     private GraphicsContext gc = getGraphicsContext2D();
 
     public CoconutTree(int x,int y) {
@@ -38,5 +38,10 @@ public class CoconutTree extends Canvas {
 //        gc.fillOval(510,200,10,20);
 //        gc.fillOval(485,200,10,20);
 //        gc.fillOval(460,200,10,20);
+    }
+
+    @Override
+    public void run() {
+        draw();
     }
 }

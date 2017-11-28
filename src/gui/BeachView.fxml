@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.152" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -18,7 +18,8 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIGHTGREEN;" GridPane.rowIndex="1">
          <children>
-            <Button layoutX="38.0" layoutY="29.0" mnemonicParsing="false" onAction="#ShowInfoBtn" text="SHOW INFO" />
+            <Button layoutX="13.0" layoutY="42.0" mnemonicParsing="false" onAction="#ShowInfoBtn" prefHeight="25.0" prefWidth="171.0" text="SHOW INFO" />
+            <Button layoutX="266.0" layoutY="42.0" mnemonicParsing="false" onAction="#randomBodyColor" text="RANDOM CHRACTER COLOR" />
          </children></AnchorPane>
       <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" />
    </children>
