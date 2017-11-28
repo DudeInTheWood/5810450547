@@ -4,7 +4,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class Misc extends Canvas {
+public class Misc extends Canvas implements Runnable  {
     private GraphicsContext gc = getGraphicsContext2D();
     public Misc(int x,int y){
         setTranslateX(x);
@@ -49,5 +49,10 @@ public class Misc extends Canvas {
         gc.setFill(Color.rgb(207, 179, 128));
         gc.fillOval(450,335,25,10);
         gc.fillOval(430,335,25,10);
+    }
+
+    @Override
+    public void run() {
+        //draw();
     }
 }

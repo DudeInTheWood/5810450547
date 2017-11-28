@@ -1,6 +1,6 @@
 # README #
 
-this is Project for kanticha yingphaibul (5810450547) with beach theme
+this is Project for kanticha yingphaibul (5810450547) with controllers theme
 
 ### What is this repository for? ###
 

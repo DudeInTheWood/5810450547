@@ -8,8 +8,8 @@ public abstract class Drawable extends Canvas{
         setTranslateX(x);
         setTranslateX(y);
 
-        setHeight(1000);
-        setWidth(1000);
+        setHeight(550);
+        setWidth(850);
     }
 
     public void draw(){

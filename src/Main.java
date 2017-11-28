@@ -8,9 +8,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("beach/BeachView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("gui/BeachView.fxml"));
         primaryStage.setTitle("Beach");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

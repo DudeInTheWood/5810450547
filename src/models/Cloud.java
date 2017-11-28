@@ -4,16 +4,26 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class Cloud extends Canvas {
+import java.util.Random;
+
+public class Cloud extends Drawable{
     private GraphicsContext gc = getGraphicsContext2D();
-    public Cloud(){
-        setWidth(200);
-        setHeight(200);
+    private Random rand = new Random();
+    public Cloud(int x, int y){
+        super(x,y);
     }
 
-    public void drawCould1(int x,int y){
-        setTranslateX(x);
-        setTranslateY(y);
+    @Override
+    public void draw(){
+       int n = rand.nextInt(2)+1;
+       if (n == 1){
+           drawCloud1();
+       }else{
+           drawCloud2();
+       }
+    }
+
+    public void drawCloud1(){
         gc.setFill(Color.rgb(255, 231, 191));
         gc.fillRect(20,35,30,30);
         gc.fillRect(40,45,30,30);
@@ -22,9 +32,7 @@ public class Cloud extends Canvas {
         gc.fillRect(80,43,30,30);
     }
 
-    public void drawCloud2(int x,int y){
-        setTranslateX(x);
-        setTranslateY(y);
+    public void drawCloud2(){
         gc.setFill(Color.rgb(255, 231, 191));
         gc.fillRect(20,35,30,30);
         gc.fillRect(40,45,30,30);
