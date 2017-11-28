@@ -38,7 +38,7 @@ public class infoViewController {
                 Alert alert3 = new Alert(Alert.AlertType.CONFIRMATION, "Why Don't you press the top-right button to close it ?" ,ButtonType.CANCEL);
                 Optional optional3 = alert3.showAndWait();
                 if (optional3.get() == ButtonType.CANCEL){
-
+                    System.out.println("LOL !");
                 }
             }
         }
