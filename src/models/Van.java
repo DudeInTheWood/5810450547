@@ -7,7 +7,7 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 public class Van extends DrawObject implements Runnable,Drawable{
-
+    private GraphicsContext gc = getGraphicsContext2D();
     public Van (int x, int y){
         super(x, y);
         setWidth(300);

@@ -2,13 +2,15 @@ package models;
 
 import javafx.animation.Interpolator;
 import javafx.animation.RotateTransition;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
 
 public class Player extends DrawObject implements Drawable, Runnable{
     private Color bodyColor = Color.rgb(255, 240, 221);
-    private int speed = 3;
+    private int speed = 5;
+    private GraphicsContext  gc = getGraphicsContext2D();
 
     public Player(int x, int y) {
         super(x, y);

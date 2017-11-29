@@ -40,9 +40,9 @@ public class Beach extends DrawObject implements Runnable,Drawable {
         gc.setFill(Color.rgb(243, 119 , 119 ));
         gc.fillRect(0,0,900,300);
         gc.setFill(Color.rgb(251 , 174 , 92));
-        gc.fillOval(300,120,700,250);
+        gc.fillOval(150,110,1000,300);
         gc.setFill(Color.rgb(255, 231, 0));
-        gc.fillOval(550,180,150,120);
+        gc.fillOval(550,160,200,180);
     }
 
     public void drawSea() {

@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.infoViewController">
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.152" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.infoViewController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffcf1f" height="373.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="571.0" />
       <Polygon fill="#ff8b1f" layoutX="64.0" layoutY="347.0" stroke="BLACK" strokeType="INSIDE">
@@ -141,7 +141,7 @@
             <Font name="Bodoni MT Bold Italic" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="151.0" layoutY="258.0" text="ah.... forget about the van, he's wlway move like crazy.." textFill="#6b0303">
+      <Label layoutX="150.0" layoutY="263.0" text="there's something special that still hiding..  let's find out..." textFill="#6b0303">
          <font>
             <Font name="Bodoni MT Bold Italic" size="15.0" />
          </font>
@@ -151,16 +151,21 @@
             <Font name="Bodoni MT Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="147.0" layoutY="230.0" text="Change skin color like lizard :" textFill="#6b0303">
+      <Label layoutX="146.0" layoutY="222.0" text="Change skin color like lizard :" textFill="#6b0303">
          <font>
             <Font name="Bodoni MT Bold Italic" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="350.0" layoutY="230.0" text="sure... press random color." textFill="#6b0303">
+      <Label layoutX="368.0" layoutY="222.0" text="sure... press random color." textFill="#6b0303">
          <font>
             <Font name="Bodoni MT Bold Italic" size="15.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4ff1f" height="5.0" layoutX="383.0" layoutY="52.0" stroke="BLACK" strokeType="INSIDE" width="192.0" />
+      <Label layoutX="311.0" layoutY="153.0" text="pree ENTER : interact object" textFill="#6b0303">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -16,10 +16,11 @@
     <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIGHTGREEN;" GridPane.rowIndex="1">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIGHTYELLOW;" GridPane.rowIndex="1">
          <children>
             <Button layoutX="13.0" layoutY="42.0" mnemonicParsing="false" onAction="#ShowInfoBtn" prefHeight="25.0" prefWidth="171.0" text="SHOW INFO" />
-            <Button layoutX="266.0" layoutY="42.0" mnemonicParsing="false" onAction="#randomBodyColor" text="RANDOM CHRACTER COLOR" />
+            <Button layoutX="315.0" layoutY="42.0" mnemonicParsing="false" onAction="#randomBodyColor" text="RANDOM CHRACTER COLOR" />
+            <Button layoutX="615.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" text="IF FISH NOT BIG ENOUGH" />
          </children></AnchorPane>
       <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" />
    </children>
