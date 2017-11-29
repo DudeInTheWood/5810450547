@@ -6,14 +6,15 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
-public class Van extends DrawObject implements Runnable,Drawable{
+public class Van extends Vehicle implements Runnable,Drawable{
     private GraphicsContext gc = getGraphicsContext2D();
     public Van (int x, int y){
         super(x, y);
         setWidth(300);
         setHeight(400);
     }
-    public void vanTransition() {
+    @Override
+    public void vehicleTransition() {
         TranslateTransition tTran = new TranslateTransition(Duration.seconds(10) , this);
         tTran.setFromX(this.getTranslateX());
         tTran.setToX(this.getTranslateX() + 1200);

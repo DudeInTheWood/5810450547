@@ -21,8 +21,9 @@ import java.util.Random;
 public class Controller {
     @FXML
     private Pane pane;
-    private Thread thread1, thread2, thread3, thread4, thread5, thread6, thread7, thread8, thread9, thread10;
+    private Thread thread1, thread2, thread3, thread4, thread5, thread6, thread7, thread8, thread9;
     private ArrayList<Interactable> interactable;
+    private ArrayList<Vehicle> vehicles;
 
     protected Beach beachArea;
     protected CoconutTree coco1, coco2;
@@ -33,6 +34,10 @@ public class Controller {
     protected Bucket bucket;
     protected Sign sign;
     protected TextBox textBox;
+    protected Cloud cloud1, cloud2, cloud3, cloud4, cloud5;
+    protected Box box1, box2;
+    protected Ship ship;
+
 
 
     @FXML
@@ -48,8 +53,9 @@ public class Controller {
     }
 
     @FXML
-    public void initialize(){
+    public void initialize() throws InterruptedException {
         interactable = new ArrayList<>();
+        vehicles = new ArrayList<>();
         beachArea = new Beach(0,0);
         player = new Player(500,300);
         van = new Van(-300,100);
@@ -60,19 +66,28 @@ public class Controller {
         bucket = new Bucket(200,300);
         lifeRing = new LifeRing(300,300);
         sign = new Sign(700,330);
-        textBox = new TextBox(50,5);
+        textBox = new TextBox(25,5);
+        cloud1 = new Cloud(50,50);
+        cloud2 = new Cloud(650, 75);
+        cloud3 = new Cloud(370, 30);
+        cloud4 = new Cloud(240, 25);
+        cloud5 = new Cloud(475, 40);
+        ship = new Ship(600,119);
+        box1 = new Box(610,300);
+        box2 = new Box(630,302);
 
         thread1 = new Thread(van);
-        //thread2 = new Thread(beachArea);
+        thread2 = new Thread(cloud4);
         thread3 = new Thread(player);
         thread4 = new Thread(coco1);
         thread5 = new Thread(coco2);
         thread6 = new Thread(lifeRing);
         thread7 = new Thread(bucket);
         thread8 = new Thread(sign);
+        thread9 = new Thread(ship);
         interactable.add(bucket);
-        this.randomBodyColor();
-        this.showSkullIsland();
+        vehicles.add(van);
+        vehicles.add(ship);
 
         display();
         pane.getParent().setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -133,20 +148,32 @@ public class Controller {
 
     }
 
-    public void display() {
+    public void display() throws InterruptedException {
         pane.getChildren().clear();
         beachArea.draw();
-        pane.getChildren().addAll(beachArea, coco1, coco2, lifeRing, bucket, sign, player, van, skull);
-        van.vanTransition();
-        textBox.draw();
+        cloud1.draw();
+        cloud2.draw();
+        cloud3.draw();
+        cloud4.draw();
+        cloud5.draw();
+        box1.draw();
+        box2.draw();
+        cloud4.cloudTransition();
+        cloud5.cloudTransition();
+        for (Vehicle v : vehicles){
+            v.vehicleTransition();
+        }
+        pane.getChildren().addAll(beachArea, cloud1, cloud2, cloud3, cloud4
+                , cloud5, lifeRing, player,coco1, coco2, box1, box2, bucket, sign, van, skull ,textBox, ship);
         thread1.start();
-        //thread2.start();
+        thread2.start();
         thread3.start();
         thread4.start();
         thread5.start();
         thread6.start();
         thread7.start();
         thread8.start();
+        thread9.start();
     }
 
     @FXML
@@ -160,12 +187,19 @@ public class Controller {
     }
 
     @FXML
-    public void showSkullIsland(){
+    public void showSkullIsland() {
         skull.draw();
         FadeTransition fade = new FadeTransition(Duration.seconds(5),skull);
         fade.setFromValue(0);
         fade.setToValue(1);
         fade.play();
+        showTextBox();
+    }
+
+    public void showTextBox() {
+        textBox.setText("Oh.. i got a map that lead to skull island behind the box, but i can't reach it....let's forget about it...");
+        textBox.draw();
+        textBox.textBoxTransition();
     }
 
 }

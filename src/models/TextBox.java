@@ -1,7 +1,10 @@
 package models;
 
+import javafx.animation.FadeTransition;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.util.Duration;
 
 public class TextBox extends DrawObject implements Runnable,Drawable {
     private GraphicsContext gc = getGraphicsContext2D();
@@ -25,10 +28,20 @@ public class TextBox extends DrawObject implements Runnable,Drawable {
     }
     public void setText(String text){
         this.text = text;
+        gc.setFont(new Font("Bodoni MT Bold Italic",22));
     }
 
     public void drawBox(){
-        gc.setFill(Color.rgb(255, 60, 173));
+        gc.setFill(Color.rgb(23, 232, 255, 0.2392));
         gc.fillRect(10,0,750,50);
+        gc.setFill(Color.grayRgb(0));
+        gc.fillText(this.text,25,30,700);
+    }
+
+    public void textBoxTransition() {
+        FadeTransition fade = new FadeTransition(Duration.seconds(5),this);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.play();
     }
 }

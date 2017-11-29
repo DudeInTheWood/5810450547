@@ -7,12 +7,14 @@ import java.util.Random;
 
 public class Beach extends DrawObject implements Runnable,Drawable {
     private GraphicsContext gc = getGraphicsContext2D();
-    private Cloud cloud1;
     private Random rand = new Random();
+
+    protected Cloud cloud1, cloud2, cloud3, cloud4;
 
     public Beach(int x,int y){
         super(x,y);
     }
+
 
     @Override
     public void draw() {
