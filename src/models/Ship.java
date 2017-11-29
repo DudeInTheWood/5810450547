@@ -5,6 +5,7 @@ import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.awt.*;
@@ -18,8 +19,16 @@ public class Ship extends Vehicle implements Runnable, Drawable{
         super(x, y);
         setHeight(200);
         setWidth(200);
+        bodyColor = Color.rgb(0,0,0);
+        sailColor = Color.rgb(0,0,0);
     }
 
+    public void setBodyColor(Color color){
+        this.bodyColor = color;
+    }
+    public void setSailColor(Color color){
+        this.sailColor = color;
+    }
 
     @Override
     public void run() {
@@ -70,6 +79,7 @@ public class Ship extends Vehicle implements Runnable, Drawable{
     }
 
     public void drawBody(){
+        gc.setFill(this.bodyColor);
         gc.fillRect(50,70,60,20);
         gc.fillRect(40,60,30,20);
         gc.fillRect(30,55,30,10);
@@ -82,6 +92,7 @@ public class Ship extends Vehicle implements Runnable, Drawable{
     }
 
     public void sail() {
+        gc.setFill(this.sailColor);
         gc.fillRect(70,35,30,30);
     }
 }

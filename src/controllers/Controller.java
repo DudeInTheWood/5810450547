@@ -164,7 +164,7 @@ public class Controller {
             v.vehicleTransition();
         }
         pane.getChildren().addAll(beachArea, cloud1, cloud2, cloud3, cloud4
-                , cloud5, lifeRing, player,coco1, coco2, box1, box2, bucket, sign, van, skull ,textBox, ship);
+                , cloud5, lifeRing, bucket, player,coco1, coco2, box1, box2, sign, van, skull ,textBox, ship);
         thread1.start();
         thread2.start();
         thread3.start();
