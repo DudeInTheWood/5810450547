@@ -6,8 +6,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.util.Duration;
 
-public class TextBox extends DrawObject implements Runnable,Drawable {
-    private GraphicsContext gc = getGraphicsContext2D();
+public class TextBox extends Misc implements Runnable {
     private String text;
 
     public TextBox(int x, int y) {
@@ -15,6 +14,8 @@ public class TextBox extends DrawObject implements Runnable,Drawable {
         setHeight(80);
         setWidth(750);
         text = "";
+        baseColor = Color.rgb(23, 232, 255, 0.2392);
+        textColor = Color.grayRgb(0);
     }
 
     @Override
@@ -32,9 +33,9 @@ public class TextBox extends DrawObject implements Runnable,Drawable {
     }
 
     public void drawBox(){
-        gc.setFill(Color.rgb(23, 232, 255, 0.2392));
+        gc.setFill(baseColor);
         gc.fillRect(10,0,750,50);
-        gc.setFill(Color.grayRgb(0));
+        gc.setFill(textColor);
         gc.fillText(this.text,25,30,700);
     }
 

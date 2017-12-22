@@ -1,21 +1,19 @@
 package models;
 
-import javafx.animation.Interpolator;
-import javafx.animation.RotateTransition;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import javafx.scene.transform.Rotate;
-import javafx.util.Duration;
 
-public class Player extends DrawObject implements Drawable, Runnable{
-    private Color bodyColor = Color.rgb(255, 240, 221);
-    private int speed = 5;
-    private GraphicsContext  gc = getGraphicsContext2D();
+public class Player extends DrawObject implements Runnable{
+    private Color bodyColor;
+    private Color hairColor;
+    private Color pantColor;
+    private int step = 5;
 
     public Player(int x, int y) {
         super(x, y);
-        setWidth(100);
-        setHeight(100);
+        this.pantColor = Color.rgb(255, 60, 173, 0.7843);
+        this.bodyColor =  Color.rgb(255, 240, 221);
+        this.hairColor = Color.rgb(0, 226, 26, 0.7843);
+
     }
     public void setBodyColor(Color color) {
         this.bodyColor = color;
@@ -44,30 +42,30 @@ public class Player extends DrawObject implements Drawable, Runnable{
         gc.fillRect(35,42,5,30);
         gc.fillRect(25,95,10,10);
         gc.fillRect(5,95,10,10);
-        gc.setFill(Color.rgb(0, 226, 26, 0.7843));
+        gc.setFill(hairColor);
         gc.fillRect(5,80,30,10);
         gc.fillRect(5,80,10,15);
         gc.fillRect(25,80,10,15);
-        gc.setFill(Color.rgb(255, 60, 173, 0.7843));
+        gc.setFill(pantColor);
         gc.fillRect(5,105,12,5);
         gc.fillRect(25,105,12,5);
 
     }
 
     public void goUp() {
-        setTranslateY(getTranslateY()-speed);
+        setTranslateY(getTranslateY()- step);
     }
 
     public void goDown() {
-        setTranslateY(getTranslateY()+speed);
+        setTranslateY(getTranslateY()+ step);
     }
 
     public void goRight() {
-        setTranslateX(getTranslateX()+speed);
+        setTranslateX(getTranslateX()+ step);
     }
 
     public void goLeft() {
-        setTranslateX(getTranslateX()-speed);
+        setTranslateX(getTranslateX()- step);
     }
 
 

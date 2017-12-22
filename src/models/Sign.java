@@ -4,12 +4,11 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
-public class Sign extends DrawObject implements Runnable,Drawable{
-    private GraphicsContext gc = getGraphicsContext2D();
+public class Sign extends Misc implements Runnable{
+    private Color ropeColor;
+
     public Sign(int x, int y) {
         super(x, y);
-        setHeight(150);
-        setWidth(200);
     }
 
     @Override

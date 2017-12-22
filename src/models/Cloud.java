@@ -9,13 +9,12 @@ import javafx.util.Duration;
 
 import java.util.Random;
 
-public class Cloud extends DrawObject implements Drawable, Runnable {
-    private GraphicsContext gc = getGraphicsContext2D();
+public class Cloud extends DrawObject implements Runnable {
+
     private Random rand = new Random();
+
     public Cloud(int x, int y){
         super(x,y);
-        setHeight(200);
-        setWidth(200);
     }
 
     @Override

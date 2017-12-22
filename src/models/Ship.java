@@ -10,15 +10,13 @@ import javafx.util.Duration;
 
 import java.awt.*;
 
-public class Ship extends Vehicle implements Runnable, Drawable{
+public class Ship extends Vehicle implements Runnable{
     private GraphicsContext gc = getGraphicsContext2D();
-    private Color bodyColor;
     private Color sailColor;
 
     public Ship(int x, int y) {
         super(x, y);
-        setHeight(200);
-        setWidth(200);
+
         bodyColor = Color.rgb(0,0,0);
         sailColor = Color.rgb(0,0,0);
     }

@@ -6,7 +6,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
-public class Van extends Vehicle implements Runnable,Drawable{
+public class Van extends Vehicle implements Runnable{
     private GraphicsContext gc = getGraphicsContext2D();
     public Van (int x, int y){
         super(x, y);

@@ -5,14 +5,15 @@ import javafx.scene.paint.Color;
 
 import java.util.Random;
 
-public class Beach extends DrawObject implements Runnable,Drawable {
-    private GraphicsContext gc = getGraphicsContext2D();
+public class Beach extends DrawObject implements Runnable {
     private Random rand = new Random();
 
     protected Cloud cloud1, cloud2, cloud3, cloud4;
 
     public Beach(int x,int y){
         super(x,y);
+        setWidth(850);
+        setHeight(550);
     }
 
 
@@ -63,8 +64,6 @@ public class Beach extends DrawObject implements Runnable,Drawable {
             int x = rand.nextInt(30) + 20;
             int y = rand.nextInt(60) + 230;
             gc.fillRect(realX+=x,y,5,5);
-//            System.out.println("x: "+realX);
-//            System.out.println("y: "+y+"\n");
         }
     }
 
